@@ -1,0 +1,6 @@
+Masukkan perintah berikut untuk masuk direktori Dionaea :
+
+Bistream dan Binaries: cd /var/lib/docker/volumes/honeynet_dionaea/_data/var/lib/dionaea
+Log Sqlite: cd /var/lib/docker/volumes/honeynet_dionaea/_data/var/log/
+
+Install sqlite3 : apt-get update && apt-get install -y sqlite3

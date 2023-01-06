@@ -1,0 +1,65 @@
+version: '3.3'
+
+volumes:
+  cowrie-etc:
+  cowrie-var:
+  dionaea:
+  honeytrap:
+
+services:
+  cowrie:
+    restart: always
+    image: d213honeynet/cowrie:final
+    container_name: cowrie
+    ports:
+      - "2222:2222"
+    volumes:
+      - cowrie-etc:/cowrie/cowrie-git/etc
+      - cowrie-var:/cowrie/cowrie-git/var
+    logging:
+      options:
+        max-size: 10m
+
+  dionaea:
+    image: dionaea/dionaea:latest
+    container_name: dionaea
+    restart: always
+    volumes:
+      - dionaea:/opt/dionaea/
+    ports:
+      - "21:21" #FTP
+      - "23:23" #Telnet
+      - "42:42" #Name Server
+      - "69:69/udp" #TFTP
+      - "123:123"
+      - "135:135" #MS DCE RPC
+      - "443:443" #HTTPS
+      - "445:445" #SMB
+      - "1433:1433" #MS SQL Server
+      - "1723:1723" #PPTP
+      - "1883:1883" #MQTT
+      - "1900:1900"
+      - "3306:3306" #MySQL
+      - "5060:5060" #sip
+      - "5060:5060/udp" #sip
+      - "5061:5061" #sip
+      - "11211:11211" #Memcached
+      - "10000:10000" #Hpfeeds
+#      - "27017:27017"
+    logging:
+      options:
+        max-size: 10m
+
+  honeytrap:
+    image: honeytrap/honeytrap:latest
+    container_name: honeytrap
+    restart: always
+    volumes:
+      - honeytrap:/config
+    ports:
+      - "8022:8022" #SSH Honeytrap
+      - "8023:8023" #SSH Honeytrap 2
+      - "5900:5900" #VNC
+    logging:
+      options:
+        max-size: 10m

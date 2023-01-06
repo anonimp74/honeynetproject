@@ -1,0 +1,3 @@
+Masukkan perintah berikut untuk masuk direktori Glastopf :
+
+cd /var/lib/docker/volumes/honeynet_glastopf/_data/
