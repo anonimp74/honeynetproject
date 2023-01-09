@@ -63,8 +63,8 @@ sudo docker-compose up -d
 sleep 15
 sudo docker-compose down
 
-sudo su -c "cp config/cowrie/cowrie.cfg /var/lib/docker/volumes/honeynet_cowrie-etc/_data"
-#sudo su -c "cp config/cowrie/cowrie.cfg /var/lib/docker/volumes/honeynet_cowrie-etc/_data; cp config/honeytrap/config.toml /var/lib/docker/volumes/honeynet_honeytrap/_data"
+sudo su -c "cp config/cowrie/cowrie.cfg /var/lib/docker/volumes/honeynetproject_cowrie-etc/_data"
+#sudo su -c "cp config/cowrie/cowrie.cfg /var/lib/docker/volumes/honeynetproject_cowrie-etc/_data; cp config/honeytrap/config.toml /var/lib/docker/volumes/honeynetproject_honeytrap/_data"
 
 sudo docker-compose up -d
 
