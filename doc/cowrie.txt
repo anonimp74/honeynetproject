@@ -1,4 +1,4 @@
 Masukkan perintah berikut untuk masuk direktori Cowrie :
 
-File downloaded: cd /var/lib/docker/volumes/honeynet_cowrie-var/_data/lib/cowrie/
-Log Cowrie: cd /var/lib/docker/volumes/honeynet_cowrie-var/_data/log/cowrie/
+File downloaded: cd /var/lib/docker/volumes/honeynetproject_cowrie-var/_data/lib/cowrie/
+Log Cowrie: cd /var/lib/docker/volumes/honeynetproject_cowrie-var/_data/log/cowrie/
